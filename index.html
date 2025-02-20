@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Подключаем CSS -->
+
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <div class="top-bar">
+        <button class="left-button">Айкович</button>
+        <div class="right-buttons">
+            <button class="sound-button"><i class="fas fa-volume-mute"></i></button>
+            <button class="achievements-button"><i class="fas fa-trophy"></i></button>
+            <button class="translation-button"><i class="fas fa-language"></i></button>
+        </div>
+    </div>
+
+    <!-- Главное меню -->
+    <div id="menu" class="menu">
+        <img src="icon/logo.jpg" class="game-logo">
+        <h1 class="game-title">Sky Jump</h1>
+        <p class="game-tagline">Reach the sky, break the limits!</p>
+        <button class="play-button" onclick="startGame()">▶ Play</button>
+    </div>
+
+    <!-- Фоновая музыка -->
+    <audio id="menu-music" loop>
+        <source src="audio/menu.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Нижняя панель с кнопками информации -->
+<div id="bottom-bar" class="bottom-bar">
+    <button id="info-btn" class="info-button"><i class="fas fa-info-circle"></i></button>
+    <button id="extra-info-btn" class="info-button"><i class="fas fa-question-circle"></i></button>
+</div>
+
+<!-- Основное модальное окно информации -->
+<div class="info-modal" id="info-modal">
+    <div class="info-content">
+        <h2>Як грати</h2>
+        <button class="close-info" id="close-info">&times;</button>
+        <div class="info-item">
+            <i class="fas fa-wallet"></i>
+            <p>Створіть гаманець у грі, підключивши свої соціальні мережі та внесіть ETH на Eclipse</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-cube"></i>
+            <p>Складайте блоки якомога вище</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-trophy"></i>
+            <p>Виграйте призовий банк, побивши найкращий результат!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Дополнительное модальное окно (например, "FAQ") -->
+<div class="info-modal" id="extra-info-modal">
+    <div class="info-content">
+        <h2>Часті питання</h2>
+        <button class="close-info" id="close-extra-info">&times;</button>
+        <div class="info-item">
+            <i class="fas fa-question"></i>
+            <p>Як підключити гаманець?</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-coins"></i>
+            <p>Як отримати бонуси у грі?</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-gamepad"></i>
+            <p>Які є режими гри?</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Игровое поле -->
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+
+    <script src="js/script.js"></script> <!-- Подключаем JS -->
+</body>
+</html>

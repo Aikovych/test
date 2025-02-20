@@ -1,0 +1,485 @@
+@import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1e90ff, #8e44ad);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* === ВЕРХНЯЯ ПАНЕЛЬ === */
+.top-bar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    z-index: 1000;
+}
+
+
+/* ========== ЛЕВАЯ КНОПКА (Айкович) ========== */
+.left-button {
+    background: linear-gradient(to bottom, #FFD700, #DAA520);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0px 6px 0px #B8860B, 0px 10px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Эффект при наведении */
+.left-button:hover {
+    background: linear-gradient(to bottom, #FFC107, #B8860B);
+    box-shadow: 0px 8px 0px #B8860B, 0px 12px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+/* Эффект нажатия */
+.left-button:active {
+    box-shadow: 0px 4px 0px #B8860B, 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(4px);
+}
+
+/* Состояние активной кнопки */
+.left-button.active {
+    background: linear-gradient(to bottom, #555, #222);
+    box-shadow: 0px 6px 0px #111, 0px 10px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Анимация иконки */
+.left-button i {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Изменение цвета иконки при активном состоянии */
+.left-button.active i {
+    color: #ccc;
+}
+
+/* === КНОПКИ ВЕРХНЕЙ ПАНЕЛИ === */
+.right-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Кнопка звука (по умолчанию - включен звук) */
+.sound-button {
+    width: 80px;
+    height: 50px;
+    background: linear-gradient(to bottom, #FFD700, #DAA520); /* Желтая кнопка по умолчанию */
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px #B8860B, 0px 10px 15px rgba(0, 0, 0, 0.3);
+    font-size: 22px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    color: black;
+}
+
+/* Выключенный звук (темная кнопка) */
+.sound-button.sound-off {
+    background: linear-gradient(to bottom, #555, #222); /* Серый цвет */
+    box-shadow: 0px 6px 0px #111, 0px 10px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Эффект уменьшения при нажатии */
+.sound-button:active {
+    transform: scale(0.9);
+}
+
+/* Плавное изменение цвета иконки */
+.sound-button i {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Серый цвет иконки при выключенном звуке */
+.sound-button.sound-off i {
+    color: #ccc;
+}
+
+/* Стили для кнопки достижений */
+.achievements-button {
+    width: 80px;
+    height: 50px;
+    background: linear-gradient(to bottom, #FFD700, #DAA520);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px #B8860B, 0px 10px 15px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    color: black;
+}
+
+/* Состояние активной кнопки (когда нажата) */
+.achievements-button.active {
+    background: linear-gradient(to bottom, #555, #222);
+    box-shadow: 0px 6px 0px #111, 0px 10px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Плавная анимация иконки */
+.achievements-button i {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Изменение цвета иконки при активной кнопке */
+.achievements-button.active i {
+    color: #ccc;
+}
+
+/* Стили для кнопки перевода */
+.translation-button {
+    width: 80px;
+    height: 50px;
+    background: linear-gradient(to bottom, #FFD700, #DAA520);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px #B8860B, 0px 10px 15px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    color: black;
+}
+/* Состояние активной кнопки (когда нажата) */
+.translation-button.active {
+    background: linear-gradient(to bottom, #555, #222);
+    box-shadow: 0px 6px 0px #111, 0px 10px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Плавная анимация иконки */
+.translation-button i {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Изменение цвета иконки при активной кнопке */
+.translation-button.active i {
+    color: #ccc;
+}
+
+.icon-button:hover {
+    background: linear-gradient(to bottom, #FFC107, #B8860B);
+    box-shadow: 0px 8px 0px #B8860B, 0px 12px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.icon-button:active {
+    box-shadow: 0px 4px 0px #B8860B, 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(4px);
+    }
+
+
+
+
+
+
+/* === МЕНЮ === */
+.menu {
+    width: 530px;
+    height: 474px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* === КНОПКА "PLAY" === */
+.play-button {
+    padding: 15px 40px;
+    margin: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #FFD700, #DAA520);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 6px 0px #B8860B, 0px 10px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #FFC107, #B8860B);
+    box-shadow: 0px 8px 0px #B8860B, 0px 12px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+button:active {
+    box-shadow: 0px 4px 0px #B8860B, 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(4px);
+}
+.play-button:hover {
+box-shadow: 0px 6px 0px #1B5E20;
+}
+
+/* Нижняя панель */
+.bottom-bar {
+    position: fixed;
+    bottom: 10px; /* Опускаем вниз */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Делаем ширину автоматической */
+    height: 48px;
+    display: flex;
+    justify-content: center; /* Центрируем элементы */
+    align-items: center;
+    padding: 5px 20px;
+
+
+    border-radius: 10px;
+
+    z-index: 1000;
+    gap: 10px; /* Отступы между кнопками */
+}
+
+/* Кнопки информации */
+.info-button {
+    width: 80px;
+    height: 50px;
+    background: linear-gradient(to bottom, #FFD700, #DAA520); /* Градиент */
+    border: none;
+    border-radius: 12px; /* Скругление */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px #B8860B, 0px 10px 15px rgba(0, 0, 0, 0.3); /* Объемная тень */
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-button:hover {
+    background: linear-gradient(to bottom, #FFC107, #B8860B);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.info-button:active {
+    transform: scale(0.9);
+}
+
+/* ========== МОДАЛЬНОЕ ОКНО ========== */
+.info-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); /* Центрирование */
+    width: 380px;
+    background: linear-gradient(to bottom, #FFEB3B, #FFD700);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+}
+
+.info-content {
+    position: relative;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.info-content h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.close-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #FFD700;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.info-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #B8860B;
+}
+
+/* =================== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ =================== */
+@media screen and (max-width: 768px) {
+    /* Уменьшаем ширину верхней панели */
+    .top-bar {
+        width: 100%;
+        height: 50px;
+        padding: 5px 10px;
+    }
+
+    /* Кнопки в верхнем баре */
+    .top-bar button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    /* Центрируем главную панель меню */
+    .menu {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .game-title {
+        font-size: 50px;
+    }
+
+    .game-tagline {
+        font-size: 16px;
+    }
+
+    /* Кнопка "Play" */
+    .play-button {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    /* Нижняя панель */
+    .bottom-bar {
+        width: 100%;
+        height: 50px;
+        padding: 5px 10px;
+    }
+
+    /* Кнопки в нижнем баре */
+    .info-button {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    /* Модальное окно - центрируем и делаем компактнее */
+    .info-modal {
+        width: 90%;
+        max-width: 320px;
+        bottom: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Текст в модальном окне */
+    .info-content h2 {
+        font-size: 20px;
+    }
+
+    .info-item {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+/* Стили для игрового поля */
+canvas {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #1e90ff, #8e44ad);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* Подключаем стильный шрифт */
+
+.game-title {
+   font-size: 70px;
+            font-weight: bold;
+            color: #FFD700;
+            text-transform: uppercase;
+            text-shadow: 4px 4px 0px #B8860B, 8px 8px 0px #8B6508;
+            letter-spacing: 3px;
+            font-family: 'Bebas Neue', sans-serif; /* Устанавливаем привлекательный шрифт */
+            margin-bottom: 5px; /* Уменьшаем расстояние между заголовком и слоганом */
+        }
+
+        .game-tagline {
+            font-size: 20px;
+            color: #F1C40F;
+            margin-top: 0px; /* Убираем дополнительный отступ сверху */
+            margin-bottom: 20px;
+        }
+        .game-logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 0px;
+            height: auto;
+            border-radius: 50%; /* Делаем круглую рамку */
+            border: 4px solid rgba(255, 255, 255, 0.8); /* Белая рамка с прозрачностью */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Мягкая тень */
+            animation: fadeIn 1.5s ease-in-out; /* Анимация появления */
+        }
+
+        /* Анимация появления */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
