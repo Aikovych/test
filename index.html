@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Меблі Ukraine Comfort — Дивани та крісла від виробника</title>
+  <meta name="description" content="Дивани та крісла українського виробництва. Плейн, Бостон, Кентукі, Твіст, Нова плюс, Фотель. Доставка по Україні." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <img src="images/logo-dark.png" alt="SOFT Furnishings" class="nav__logo-img" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="#why-us" class="nav__link">Переваги</a></li>
+        <li><a href="#catalog" class="nav__link">Каталог</a></li>
+        <li><a href="tel:+380638479971" class="nav__link nav__link--phone">📞 +380638479971</a></li>
+        <li><a href="#catalog" class="nav__link nav__link--cta">Замовити</a></li>
+      </ul>
+      <button class="nav__burger" id="navBurger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <a href="#catalog" class="nav__mobile-link">Каталог</a>
+      <a href="#why-us" class="nav__mobile-link">Чому ми</a>
+      <a href="katalog.pdf" download class="nav__mobile-link">Завантажити PDF</a>
+      <a href="tel:+380638479971" class="nav__mobile-link">📞 +380638479971</a>
+      <a href="#catalog" class="nav__mobile-link">Замовити</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="images/photo-04.jpg" alt="SOFT Furnishings" class="hero__bg-img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow animate-on-scroll">🇺🇦 Виробництво Україна · Без посередників</p>
+      <h1 class="hero__title animate-on-scroll">
+        Дивани та крісла<br />
+        <em>від виробника</em>
+      </h1>
+      <p class="hero__subtitle animate-on-scroll">
+        Якісні м'які меблі за цінами заводу. Єврокнижка, пружинні блоки, тканини SIC Global Textiles — від 1 900 грн.
+      </p>
+      <div class="hero__actions animate-on-scroll">
+        <a href="#catalog" class="btn btn--primary btn--large">Обрати диван</a>
+        <a href="tel:+380638479971" class="btn btn--ghost btn--large">📞 +380638479971</a>
+      </div>
+      <div class="hero__trust animate-on-scroll">
+        <span>✓ Оплата при отриманні</span>
+        <span>✓ Доставка по Україні</span>
+        <span>✓ Гарантія якості</span>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Гортайте вниз</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Чому обирають нас</span>
+        <h2 class="section-title">Меблі, які <em>говорять самі за себе</em></h2>
+      </div>
+      <div class="why-us__grid">
+        <div class="why-card animate-on-scroll">
+          <div class="why-card__icon">🇺🇦</div>
+          <h3 class="why-card__title">Виробництво Україна</h3>
+          <p class="why-card__text">Купуєте напряму від виробника — без посередників, без переплат. Кожен диван зібраний руками українських майстрів.</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-card__icon">💰</div>
+          <h3 class="why-card__title">Ціни від 1 900 грн</h3>
+          <p class="why-card__text">Від компактного крісла до повноцінного дивана-ліжка — є варіант для будь-якого бюджету та простору.</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-card__icon">🛋️</div>
+          <h3 class="why-card__title">Для щоденного сну</h3>
+          <p class="why-card__text">Пружинний блок + ППУ підвищеної еластичності + холофайбер. Наші дивани витримують щоденне розкладання роками.</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-card__icon">🎨</div>
+          <h3 class="why-card__title">Широкий вибір кольорів</h3>
+          <p class="why-card__text">Тканини SIC Global Textiles у десятках відтінків. Підберемо колір під ваш інтер'єр — зв'яжіться з нами.</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-card__icon">📦</div>
+          <h3 class="why-card__title">Доставка по Україні</h3>
+          <p class="why-card__text">Відправляємо Новою поштою або власною доставкою. Оплата при отриманні або передоплата — як зручно вам.</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-card__icon">📞</div>
+          <h3 class="why-card__title">Консультація безкоштовно</h3>
+          <p class="why-card__text">Юрій Олександрович особисто проконсультує з вибором моделі, тканини та розміру. Телефонуйте — відповімо швидко.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof" id="proof">
+    <div class="container">
+      <div class="proof__inner animate-on-scroll">
+        <div class="proof__stat">
+          <span class="proof__num">500+</span>
+          <span class="proof__label">задоволених клієнтів</span>
+        </div>
+        <div class="proof__divider"></div>
+        <div class="proof__stat">
+          <span class="proof__num">6</span>
+          <span class="proof__label">моделей в каталозі</span>
+        </div>
+        <div class="proof__divider"></div>
+        <div class="proof__stat">
+          <span class="proof__num">100%</span>
+          <span class="proof__label">українське виробництво</span>
+        </div>
+        <div class="proof__divider"></div>
+        <div class="proof__stat">
+          <span class="proof__num">від 1 900</span>
+          <span class="proof__label">гривень</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container cta-band__inner animate-on-scroll">
+      <div class="cta-band__text">
+        <h2 class="cta-band__title">Готові обрати свій диван?</h2>
+        <p class="cta-band__sub">Зателефонуйте або напишіть — підберемо модель, колір і тканину під ваш інтер'єр та бюджет.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="tel:+380638479971" class="btn btn--primary btn--large">📞 Зателефонувати</a>
+        <button class="btn btn--viber btn--large" onclick="handleViber()">Написати у Viber</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="other-models" id="catalog">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Колекція SOFT Furnishings</span>
+        <h2 class="section-title">Наш <em>каталог</em></h2>
+        <p class="section-desc">Дивани та крісла українського виробництва — оберіть своє.</p>
+      </div>
+      <div class="other-models__grid">
+        <!-- Диван Плейн -->
+        <div class="model-card animate-on-scroll" onclick="openPlain()">
+          <div class="model-card__img">
+            <img src="images/photo-04.jpg" alt="Диван Плейн" loading="lazy" />
+            <div class="model-card__badge">В наявності</div>
+          </div>
+          <div class="model-card__info">
+            <p class="model-card__name">«Плейн»</p>
+            <p class="model-card__desc">Єврокнижка · 240×112 см · Спальне місце 133×199 см · Zoom 22™ Антрацит</p>
+            <div class="model-card__footer">
+              <span class="model-card__price">13 800 <span>грн</span></span>
+              <button class="btn btn--primary" onclick="event.stopPropagation(); handleOrder()">Замовити</button>
+            </div>
+          </div>
+        </div>
+        <!-- Диван Кентукі -->
+        <div class="model-card animate-on-scroll" onclick="openKentucky()">
+          <div class="model-card__img">
+            <img src="images/kentucky-04.jpg" alt="Диван Кентукі" loading="lazy" />
+            <div class="model-card__badge">В наявності</div>
+          </div>
+          <div class="model-card__info">
+            <p class="model-card__name">«Кентукі»</p>
+            <p class="model-card__desc">Механізм книжка · 195×90×95 см · Спальне місце 120×190 см</p>
+            <div class="model-card__footer">
+              <span class="model-card__price">5 800 <span>грн</span></span>
+              <button class="btn btn--primary" onclick="event.stopPropagation(); handleOrder()">Замовити</button>
+            </div>
+          </div>
+        </div>
+        <!-- Диван Бостон -->
+        <div class="model-card animate-on-scroll" onclick="openBoston()">
+          <div class="model-card__img">
+            <img src="images/boston-04.jpg" alt="Диван Бостон" loading="lazy" />
+            <div class="model-card__badge">В наявності</div>
+          </div>
+          <div class="model-card__info">
+            <p class="model-card__name">«Бостон»</p>
+            <p class="model-card__desc">Єврокнижка · 235×98×80 см · Спальне місце 145×195 см · 3 ніші для білизни</p>
+            <div class="model-card__footer">
+              <span class="model-card__price">8 000 <span>грн</span></span>
+              <button class="btn btn--primary" onclick="event.stopPropagation(); handleOrder()">Замовити</button>
+            </div>
+          </div>
+        </div>
+        <!-- Крісло Фотель -->
+        <div class="model-card animate-on-scroll" onclick="openFotel()">
+          <div class="model-card__img">
+            <img src="images/fotel-01.jpg" alt="Крісло Фотель" loading="lazy" />
+            <div class="model-card__badge">В наявності</div>
+          </div>
+          <div class="model-card__info">
+            <p class="model-card__name">«Фотель»</p>
+            <p class="model-card__desc">Крісло-бочонок · Велюр · Широка палітра кольорів · Для дому та бізнесу</p>
+            <div class="model-card__footer">
+              <span class="model-card__price">1 900 <span>грн/шт</span></span>
+              <button class="btn btn--primary" onclick="event.stopPropagation(); handleOrder()">Замовити</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo-dark.png" alt="SOFT Furnishings" class="footer__logo-img" />
+        <span class="footer__tagline">Комфорт. Стиль. Україна.</span>
+      </div>
+      <div class="footer__contacts">
+        <a href="tel:+380638479971" class="footer__contact-link">📞 +380638479971</a>
+        <a href="tel:+380970180500" class="footer__contact-link">📞 +380970180500</a>
+        <span class="footer__contact-name">Юрій Олександрович</span>
+      </div>
+      <div class="footer__links">
+        <a href="#catalog">Каталог</a>
+        <a href="katalog.pdf" download>Завантажити PDF</a>
+        <a href="#catalog">Замовити</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Ukraine Comfort. Всі права захищені.</p>
+    </div>
+  </footer>
+
+  <!-- PLAIN MODAL -->
+  <div class="modal" id="plainModal" onclick="closePlain(event)">
+    <div class="modal__inner">
+      <button class="modal__close" onclick="closePlain()" aria-label="Закрити">&times;</button>
+      <div class="modal__slider">
+        <div class="modal__track" id="plainTrack">
+          <img src="images/photo-01.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-02.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-03.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-04.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-05.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-06.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-07.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-08.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-09.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-10.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-11.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-12.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-13.jpg" loading="lazy" alt="Плейн" />
+          <img src="images/photo-14.jpg" loading="lazy" alt="Плейн" />
+        </div>
+        <button class="slider__btn slider__btn--prev" id="plainPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="slider__btn slider__btn--next" id="plainNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="plainDots"></div>
+      </div>
+      <div class="modal__content">
+        <span class="section-tag">Виробництво Україна</span>
+        <h2 class="modal__title">Диван «Плейн»</h2>
+        <p class="modal__desc">Ідеальне поєднання розкішного комфорту та сучасного стилю. М'яка тканина Zoom 22™ Антрацит, глибоке сидіння та єврокнижка для щоденного сну.</p>
+        <div class="modal__specs">
+          <div class="modal__spec"><span>Розміри</span><span>240 × 112 см</span></div>
+          <div class="modal__spec"><span>Спальне місце</span><span>133 × 199 см</span></div>
+          <div class="modal__spec"><span>Механізм</span><span>Єврокнижка</span></div>
+          <div class="modal__spec"><span>Наповнення</span><span>Пружина-змійка + ППУ + холофайбер</span></div>
+          <div class="modal__spec"><span>Тканина</span><span>Zoom 22™ SIC Global Textiles</span></div>
+          <div class="modal__spec"><span>Короб для білизни</span><span>Є</span></div>
+        </div>
+        <div class="modal__price-row">
+          <span class="modal__price">13 800 <em>грн</em></span>
+          <div class="modal__actions">
+            <button class="btn btn--primary" onclick="handleOrder()">Замовити</button>
+            <button class="btn btn--viber" onclick="handleViber()">Viber</button>
+          </div>
+        </div>
+        <p class="modal__colors">Колір: Антрацит. Уточнюйте наявність при замовленні.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOTEL MODAL -->
+  <div class="modal" id="fotelModal" onclick="closeFotel(event)">
+    <div class="modal__inner">
+      <button class="modal__close" onclick="closeFotel()" aria-label="Закрити">&times;</button>
+      <div class="modal__slider">
+        <div class="modal__track" id="fotelTrack">
+          <img src="images/fotel-01.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-02.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-03.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-04.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-05.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-06.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-07.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-08.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-09.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-10.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-11.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-12.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-13.jpg" loading="lazy" alt="Фотель" />
+          <img src="images/fotel-14.jpg" loading="lazy" alt="Фотель — палітра кольорів 1" />
+          <img src="images/fotel-15.jpg" loading="lazy" alt="Фотель — палітра кольорів 2" />
+          <img src="images/fotel-16.jpg" loading="lazy" alt="Фотель — палітра кольорів 3" />
+          <img src="images/fotel-17.jpg" loading="lazy" alt="Фотель — інтер'єр" />
+        </div>
+        <button class="slider__btn slider__btn--prev" id="fotelPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="slider__btn slider__btn--next" id="fotelNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="fotelDots"></div>
+      </div>
+      <div class="modal__content">
+        <span class="section-tag">Виробництво Україна</span>
+        <h2 class="modal__title">Крісло «Фотель»</h2>
+        <p class="modal__desc">Округлі лінії та суцільний силует — ідеальне поєднання сучасного дизайну та максимального комфорту. Підходить для дому, салону краси, лаунж-зони або офісу. Доступний у широкій палітрі кольорів і матеріалів.</p>
+        <div class="modal__specs">
+          <div class="modal__spec"><span>Тип</span><span>Крісло-бочонок</span></div>
+          <div class="modal__spec"><span>Матеріал</span><span>Мікровелюр / тканина / екошкіра</span></div>
+          <div class="modal__spec"><span>Кольори</span><span>Синій, сірий, червоний, зелений, чорний та ін.</span></div>
+          <div class="modal__spec"><span>Використання</span><span>Дім, офіс, салон, лаунж</span></div>
+          <div class="modal__spec"><span>Виробник</span><span>Україна</span></div>
+          <div class="modal__spec"><span>Ціна за одиницю</span><span>2 700 грн</span></div>
+        </div>
+        <div class="modal__price-row">
+          <span class="modal__price">2 700 <em>грн/шт</em></span>
+          <div class="modal__actions">
+            <button class="btn btn--primary" onclick="handleOrder()">Замовити</button>
+            <button class="btn btn--viber" onclick="handleViber()">Viber</button>
+          </div>
+        </div>
+        <p class="modal__colors">Колір, матеріал та кількість — уточнюйте при замовленні</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOSTON MODAL -->
+  <div class="modal" id="bostonModal" onclick="closeBoston(event)">
+    <div class="modal__inner">
+      <button class="modal__close" onclick="closeBoston()" aria-label="Закрити">&times;</button>
+      <div class="modal__slider">
+        <div class="modal__track" id="bostonTrack">
+          <img src="images/boston-01.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-02.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-03.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-04.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-05.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-06.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-07.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-08.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-09.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-10.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-11.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-12.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-13.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-14.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-15.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-16.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-17.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-18.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-19.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-20.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-21.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-22.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-23.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-24.jpg" loading="lazy" alt="Бостон" />
+          <img src="images/boston-25.jpg" loading="lazy" alt="Бостон" />
+        </div>
+        <button class="slider__btn slider__btn--prev" id="bostonPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="slider__btn slider__btn--next" id="bostonNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="bostonDots"></div>
+      </div>
+      <div class="modal__content">
+        <span class="section-tag">Виробництво Україна</span>
+        <h2 class="modal__title">Диван «Бостон»</h2>
+        <p class="modal__desc">Трендова двоколірна палітра, єврокнижка для щоденного сну, дерев'яні накладки-столики та три великі подушки у комплекті. Тканина Enjoy™ SIC Global Textiles.</p>
+        <div class="modal__specs">
+          <div class="modal__spec"><span>Розміри</span><span>235 × 98 × 80 см</span></div>
+          <div class="modal__spec"><span>Спальне місце</span><span>145 × 195 см</span></div>
+          <div class="modal__spec"><span>Механізм</span><span>Єврокнижка</span></div>
+          <div class="modal__spec"><span>Наповнення</span><span>ППУ + пружинний блок + синтепон</span></div>
+          <div class="modal__spec"><span>Ніші для білизни</span><span>3 шт</span></div>
+          <div class="modal__spec"><span>Висота сидіння</span><span>45 см</span></div>
+        </div>
+        <div class="modal__price-row">
+          <span class="modal__price">9 000 <em>грн</em></span>
+          <div class="modal__actions">
+            <button class="btn btn--primary" onclick="handleOrder()">Замовити</button>
+            <button class="btn btn--viber" onclick="handleViber()">Viber</button>
+          </div>
+        </div>
+        <p class="modal__colors">Доступний у кольорах: синій, бірюзовий, сірий, коричневий та ін.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  <div class="modal" id="kentuckyModal" onclick="closeKentucky(event)">
+    <div class="modal__inner">
+      <button class="modal__close" onclick="closeKentucky()" aria-label="Закрити">&times;</button>
+      <div class="modal__slider">
+        <div class="modal__track" id="modalTrack">
+          <img src="images/kentucky-01.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-02.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-03.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-04.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-05.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-06.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-07.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-08.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-09.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-10.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-11.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-12.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-13.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-14.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-15.jpg" loading="lazy" alt="Кентукі" />
+          <img src="images/kentucky-16.jpg" loading="lazy" alt="Кентукі" />
+        </div>
+        <button class="slider__btn slider__btn--prev" id="modalPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="slider__btn slider__btn--next" id="modalNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="modalDots"></div>
+      </div>
+      <div class="modal__content">
+        <span class="section-tag">Виробництво Україна</span>
+        <h2 class="modal__title">Диван «Кентукі»</h2>
+        <p class="modal__desc">Сучасний диван-книжка з пружинним наповненням — легка трансформація та комфорт щодня. Доступний у багатьох кольорах.</p>
+        <div class="modal__specs">
+          <div class="modal__spec"><span>Розміри</span><span>195 × 90 × 95 см</span></div>
+          <div class="modal__spec"><span>Спальне місце</span><span>120 × 190 см</span></div>
+          <div class="modal__spec"><span>Механізм</span><span>Книжка</span></div>
+          <div class="modal__spec"><span>Наповнення</span><span>Пружини «змійка» + ППУ</span></div>
+          <div class="modal__spec"><span>Висота сидіння</span><span>40 см</span></div>
+          <div class="modal__spec"><span>Вага</span><span>41,5 кг</span></div>
+        </div>
+        <div class="modal__price-row">
+          <span class="modal__price">7 300 <em>грн</em></span>
+          <div class="modal__actions">
+            <button class="btn btn--primary" onclick="handleOrder()">Замовити</button>
+            <button class="btn btn--viber" onclick="handleViber()">Viber</button>
+          </div>
+        </div>
+        <p class="modal__colors">Колір та тканина — уточнюйте при замовленні</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOTEL DOUBLE MODAL -->
+  <div class="modal" id="fotelDoubleModal" onclick="closeFotelDouble(event)">
+    <div class="modal__inner">
+      <button class="modal__close" onclick="closeFotelDouble()" aria-label="Закрити">&times;</button>
+      <div class="modal__slider">
+        <div class="modal__track" id="fotelDoubleTrack">
+          <img src="images/fotel-01.jpg" loading="lazy" alt="Фотель подвійна" />
+          <img src="images/fotel-06.jpg" loading="lazy" alt="Фотель подвійна" />
+          <img src="images/fotel-07.jpg" loading="lazy" alt="Фотель подвійна" />
+          <img src="images/fotel-09.jpg" loading="lazy" alt="Фотель подвійна" />
+          <img src="images/fotel-14.jpg" loading="lazy" alt="Фотель — кольори" />
+          <img src="images/fotel-15.jpg" loading="lazy" alt="Фотель — кольори" />
+          <img src="images/fotel-16.jpg" loading="lazy" alt="Фотель — кольори" />
+        </div>
+        <button class="slider__btn slider__btn--prev" id="fotelDoublePrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="slider__btn slider__btn--next" id="fotelDoubleNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="fotelDoubleDots"></div>
+      </div>
+      <div class="modal__content">
+        <span class="section-tag">Виробництво Україна</span>
+        <h2 class="modal__title">«Фотель» подвійна</h2>
+        <p class="modal__desc">Двомісне крісло-бочонок з витонченою формою. Ідеально для офісних приймалень, лаунж-зон, салонів краси та кафе. Широка палітра кольорів екошкіри та тканини.</p>
+        <div class="modal__specs">
+          <div class="modal__spec"><span>Розміри</span><span>127 × 76 × 67 см</span></div>
+          <div class="modal__spec"><span>Сидіння</span><span>95 × 45 см, висота 46 см</span></div>
+          <div class="modal__spec"><span>Каркас</span><span>Дерево, ДСП, ДВП</span></div>
+          <div class="modal__spec"><span>Наповнювач</span><span>Пінополістирол</span></div>
+          <div class="modal__spec"><span>Матеріал</span><span>Екошкіра / тканина SIC Global</span></div>
+          <div class="modal__spec"><span>Вага</span><span>20 кг</span></div>
+        </div>
+        <div class="modal__price-row">
+          <span class="modal__price">2 500 <em>грн</em></span>
+          <div class="modal__actions">
+            <button class="btn btn--primary" onclick="handleOrder()">Замовити</button>
+            <button class="btn btn--viber" onclick="handleViber()">Viber</button>
+          </div>
+        </div>
+        <p class="modal__colors">Колір та матеріал — уточнюйте при замовленні</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TVIST MODAL -->
+  <div class="modal" id="tvistModal" onclick="closeTvist(event)">
+    <div class="modal__inner">
+      <button class="modal__close" onclick="closeTvist()" aria-label="Закрити">&times;</button>
+      <div class="modal__slider">
+        <div class="modal__track" id="tvistTrack">
+          <img src="images/tvist-01.jpg" loading="lazy" alt="Твіст" />
+          <img src="images/tvist-02.jpg" loading="lazy" alt="Твіст" />
+        </div>
+        <button class="slider__btn slider__btn--prev" id="tvistPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="slider__btn slider__btn--next" id="tvistNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="tvistDots"></div>
+      </div>
+      <div class="modal__content">
+        <span class="section-tag">Виробництво Україна</span>
+        <h2 class="modal__title">Диван «Твіст»</h2>
+        <p class="modal__desc">Модульний диван-ліжко з поворотним механізмом. Просторе спальне місце 160×200 см, 2 бокові ніші, 2 декоративні подушки. Тканина Enjoy™ SIC Global Textiles.</p>
+        <div class="modal__specs">
+          <div class="modal__spec"><span>Розміри</span><span>275 × 110 × 87 см</span></div>
+          <div class="modal__spec"><span>Спальне місце</span><span>160 × 200 см</span></div>
+          <div class="modal__spec"><span>Механізм</span><span>Поворотний (вперед)</span></div>
+          <div class="modal__spec"><span>Наповнення</span><span>ППУ + пружинний блок + синтепон</span></div>
+          <div class="modal__spec"><span>Ніші</span><span>2 шт</span></div>
+          <div class="modal__spec"><span>Висота сидіння</span><span>42 см</span></div>
+        </div>
+        <div class="modal__price-row">
+          <span class="modal__price">11 000 <em>грн</em></span>
+          <div class="modal__actions">
+            <button class="btn btn--primary" onclick="handleOrder()">Замовити</button>
+            <button class="btn btn--viber" onclick="handleViber()">Viber</button>
+          </div>
+        </div>
+        <p class="modal__colors">Колір та тканина — уточнюйте при замовленні</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOVA MODAL -->
+  <div class="modal" id="novaModal" onclick="closeNova(event)">
+    <div class="modal__inner">
+      <button class="modal__close" onclick="closeNova()" aria-label="Закрити">&times;</button>
+      <div class="modal__slider">
+        <div class="modal__track" id="novaTrack">
+          <img src="images/nova-01.jpg" loading="lazy" alt="Нова плюс" />
+          <img src="images/nova-02.jpg" loading="lazy" alt="Нова плюс" />
+        </div>
+        <button class="slider__btn slider__btn--prev" id="novaPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="slider__btn slider__btn--next" id="novaNext" aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="novaDots"></div>
+      </div>
+      <div class="modal__content">
+        <span class="section-tag">Виробництво Україна</span>
+        <h2 class="modal__title">«Нова плюс»</h2>
+        <p class="modal__desc">Затишний диван-софа для дитячої або підліткової кімнати. М'яка вельветова оббивка, глибоке сидіння, короб для білизни. Тканина ZOOM™ SIC Global Textiles.</p>
+        <div class="modal__specs">
+          <div class="modal__spec"><span>Розміри</span><span>145 × 85 × 82 см</span></div>
+          <div class="modal__spec"><span>Спальне місце</span><span>190 × 80 см</span></div>
+          <div class="modal__spec"><span>Наповнення</span><span>ППУ + пружина змійка + синтепон</span></div>
+          <div class="modal__spec"><span>Короб для білизни</span><span>Є</span></div>
+          <div class="modal__spec"><span>Висота сидіння</span><span>44 см</span></div>
+          <div class="modal__spec"><span>Виробник</span><span>Україна</span></div>
+        </div>
+        <div class="modal__price-row">
+          <span class="modal__price">6 000 <em>грн</em></span>
+          <div class="modal__actions">
+            <button class="btn btn--primary" onclick="handleOrder()">Замовити</button>
+            <button class="btn btn--viber" onclick="handleViber()">Viber</button>
+          </div>
+        </div>
+        <p class="modal__colors">Колір та тканина — уточнюйте при замовленні</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
