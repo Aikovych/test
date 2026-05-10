@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AromaTag — Скоро відкриємось</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--black:#08080A;--blue:#4A6CF7;--gold:#E8A900;--white:#F2F2F2;--muted:#666;--border:#1e1e2e}
+    body{background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;overflow:hidden}
+
+    /* Background glow */
+    body::before{content:'';position:fixed;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(74,108,247,0.08) 0%,transparent 70%);pointer-events:none}
+
+    .logo{font-family:'Arial Black',Arial,sans-serif;font-size:28px;letter-spacing:4px;text-transform:uppercase;margin-bottom:48px}
+    .logo span{color:var(--gold)}
+
+    .disc{width:120px;height:120px;border-radius:50%;background:#0d0d18;border:2px solid #1e1e30;display:flex;align-items:center;justify-content:center;margin:0 auto 40px;position:relative;overflow:hidden}
+    .disc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 65% 25%,rgba(74,108,247,0.15) 0%,transparent 60%)}
+    .disc-hole{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:8px;height:8px;border-radius:50%;background:var(--black);border:1px solid #333;z-index:2}
+    .disc img{width:70px;height:70px;object-fit:contain;border-radius:50%;z-index:1}
+
+    h1{font-family:'Arial Black',Arial,sans-serif;font-size:42px;text-transform:uppercase;letter-spacing:2px;line-height:1.1;margin-bottom:16px}
+    h1 span{color:var(--blue)}
+    .subtitle{font-size:15px;color:var(--muted);max-width:360px;line-height:1.7;margin-bottom:48px}
+
+    /* Countdown */
+    .countdown{display:flex;gap:16px;justify-content:center;margin-bottom:48px;flex-wrap:wrap}
+    .cd-block{background:#111118;border:1px solid var(--border);border-radius:10px;padding:16px 20px;min-width:72px}
+    .cd-num{font-family:'Arial Black',Arial,sans-serif;font-size:36px;color:var(--gold);line-height:1}
+    .cd-label{font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:6px}
+
+    /* Social */
+    .socials{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+    .social-btn{display:flex;align-items:center;gap:8px;background:#111118;border:1px solid var(--border);border-radius:6px;padding:10px 18px;color:var(--white);text-decoration:none;font-size:13px;font-weight:600;transition:border-color .2s}
+    .social-btn:hover{border-color:var(--gold)}
+
+    .notify{font-size:12px;color:var(--muted)}
+    .notify a{color:var(--gold);text-decoration:none}
+
+    @media(max-width:480px){
+      h1{font-size:30px}
+      .cd-num{font-size:28px}
+      .cd-block{padding:12px 14px;min-width:60px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">AROMA<span>TAG</span></div>
+
+  <div class="disc">
+    <div class="disc-hole"></div>
+    <div style="font-size:36px;z-index:1">🚗</div>
+  </div>
+
+  <h1>Скоро<br><span>відкриємось</span></h1>
+  <p class="subtitle">Готуємо щось особливе для вашого авто. Залишайтесь на зв'язку!</p>
+
+  <div class="countdown">
+    <div class="cd-block"><div class="cd-num" id="days">00</div><div class="cd-label">Днів</div></div>
+    <div class="cd-block"><div class="cd-num" id="hours">00</div><div class="cd-label">Годин</div></div>
+    <div class="cd-block"><div class="cd-num" id="mins">00</div><div class="cd-label">Хвилин</div></div>
+    <div class="cd-block"><div class="cd-num" id="secs">00</div><div class="cd-label">Секунд</div></div>
+  </div>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/aikovych_official/" target="_blank" class="social-btn">📷 Instagram</a>
+    <a href="https://t.me/aikovyc_h" target="_blank" class="social-btn">✈️ Telegram</a>
+    <a href="tel:+380980617718" class="social-btn">📞 +38 098 061 77 18</a>
+  </div>
+
+  <p class="notify">Питання? <a href="mailto:Antixofficialwork@gmail.com">Antixofficialwork@gmail.com</a></p>
+
+<script>
+  // Launch date — change to your real date
+  const launch = new Date('2026-05-20T10:00:00');
+
+  function tick(){
+    const now = new Date();
+    const diff = launch - now;
+    if(diff <= 0){
+      document.querySelector('.countdown').innerHTML = '<p style="color:var(--gold);font-size:18px;font-weight:700">Ми відкриті! 🎉</p>';
+      return;
+    }
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor((diff%86400000)/3600000);
+    const m = Math.floor((diff%3600000)/60000);
+    const s = Math.floor((diff%60000)/1000);
+    document.getElementById('days').textContent  = String(d).padStart(2,'0');
+    document.getElementById('hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('mins').textContent  = String(m).padStart(2,'0');
+    document.getElementById('secs').textContent  = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
+</body>
+</html>
