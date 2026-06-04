@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOFT Furnishings — М'які меблі преміум класу</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <!-- SOFT Furnishings Logo SVG (inline, replicates brand) -->
+    <a href="#" class="nav-logo" aria-label="SOFT Furnishings">
+      <svg class="logo-svg" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- S -->
+        <text x="0" y="48" font-family="'Jost', sans-serif" font-weight="300" font-size="52" fill="white" letter-spacing="-1">S</text>
+        <!-- Sofa / O shape -->
+        <g transform="translate(38, 8)">
+          <!-- Sofa body (rounded rectangle) -->
+          <rect x="4" y="4" width="46" height="26" rx="13" stroke="#7dd3db" stroke-width="3.5" fill="none"/>
+          <!-- Left leg -->
+          <line x1="12" y1="30" x2="10" y2="40" stroke="#7dd3db" stroke-width="3" stroke-linecap="round"/>
+          <!-- Right leg -->
+          <line x1="42" y1="30" x2="44" y2="40" stroke="#7dd3db" stroke-width="3" stroke-linecap="round"/>
+          <!-- Base bar -->
+          <line x1="8" y1="38" x2="46" y2="38" stroke="#7dd3db" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        <!-- FT -->
+        <text x="94" y="48" font-family="'Jost', sans-serif" font-weight="300" font-size="52" fill="white" letter-spacing="-1">FT</text>
+        <!-- ® -->
+        <text x="194" y="16" font-family="'Jost', sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.5)">®</text>
+        <!-- Furnishings -->
+        <text x="55" y="58" font-family="'Jost', sans-serif" font-weight="300" font-size="13" fill="rgba(255,255,255,0.55)" letter-spacing="3">Furnishings</text>
+      </svg>
+    </a>
+
+    <div class="nav-links">
+      <a href="#collections">Колекції</a>
+      <a href="#about">Про нас</a>
+      <a href="#materials">Матеріали</a>
+      <a href="#contact" class="nav-cta">Зв'язатися</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Меню">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#collections" class="mobile-link">Колекції</a>
+    <a href="#about" class="mobile-link">Про нас</a>
+    <a href="#materials" class="mobile-link">Матеріали</a>
+    <a href="#contact" class="mobile-link">Зв'язатися</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="--img: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1800&q=80')"></div>
+      <div class="hero-slide" style="--img: url('https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=1800&q=80')"></div>
+      <div class="hero-slide" style="--img: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1800&q=80')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">М'які меблі · Ручна робота</p>
+      <h1 class="hero-title">
+        <span class="line">Затишок,</span>
+        <span class="line italic">що залишається</span>
+        <span class="line">назавжди</span>
+      </h1>
+      <p class="hero-desc">Кожен диван, крісло і ліжко — це діалог між комфортом і стилем.<br>SOFT Furnishings створює м'які меблі, які живуть разом з вами.</p>
+      <div class="hero-actions">
+        <a href="#collections" class="btn-primary">Переглянути колекції</a>
+        <a href="#contact" class="btn-ghost">Безкоштовна консультація</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Гортайте</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-dots" id="heroDots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+    <div class="hero-counter"><span id="slideNum">01</span> / 03</div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement" id="about">
+    <div class="statement-inner reveal-up">
+      <p class="label">Наш підхід</p>
+      <h2 class="statement-text">
+        М'які меблі — це не просто<br>
+        <em>меблі, це відчуття дому</em>
+      </h2>
+      <p class="statement-body">
+        SOFT Furnishings — студія авторських м'яких меблів. Дивани, крісла, ліжка, пуфи — все виготовляється вручну з натуральних матеріалів. Від першого ескізу до вашої вітальні ми контролюємо кожен шов.
+      </p>
+    </div>
+    <div class="statement-numbers">
+      <div class="num-item reveal-up" style="--delay: 0s">
+        <span class="num">8</span>
+        <span class="num-label">років на ринку</span>
+      </div>
+      <div class="num-item reveal-up" style="--delay: 0.1s">
+        <span class="num">1200+</span>
+        <span class="num-label">виготовлених виробів</span>
+      </div>
+      <div class="num-item reveal-up" style="--delay: 0.2s">
+        <span class="num">100%</span>
+        <span class="num-label">натуральні матеріали</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION GRID -->
+  <section class="collections" id="collections">
+    <div class="collections-header">
+      <p class="label reveal-up">Колекції 2025</p>
+      <h2 class="section-title reveal-up">Комфорт з характером</h2>
+    </div>
+
+    <div class="col-track-wrap">
+      <div class="col-track" id="colTrack">
+
+        <article class="col-card" data-cursor="Детальніше">
+          <div class="col-img-wrap">
+            <div class="col-img" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80')"></div>
+          </div>
+          <div class="col-info">
+            <span class="col-tag">Диван</span>
+            <h3>Velour Cloud</h3>
+            <p>Модульний диван з оксамитовим велюром. Пружинний блок Bonnell, дубові ніжки.</p>
+            <span class="col-price">від 68 900 ₴</span>
+          </div>
+        </article>
+
+        <article class="col-card" data-cursor="Детальніше">
+          <div class="col-img-wrap">
+            <div class="col-img" style="background-image: url('https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=900&q=80')"></div>
+          </div>
+          <div class="col-info">
+            <span class="col-tag">Крісло</span>
+            <h3>Boucle Nest</h3>
+            <p>Крісло-кокон з букле-тканини. Корпус з масиву горіха, висока спинка.</p>
+            <span class="col-price">від 24 500 ₴</span>
+          </div>
+        </article>
+
+        <article class="col-card" data-cursor="Детальніше">
+          <div class="col-img-wrap">
+            <div class="col-img" style="background-image: url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900&q=80')"></div>
+          </div>
+          <div class="col-info">
+            <span class="col-tag">Ліжко</span>
+            <h3>Linen Haven</h3>
+            <p>М'яке ліжко з льняною оббивкою. Узголів'я з підйомним механізмом.</p>
+            <span class="col-price">від 52 000 ₴</span>
+          </div>
+        </article>
+
+        <article class="col-card" data-cursor="Детальніше">
+          <div class="col-img-wrap">
+            <div class="col-img" style="background-image: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&q=80')"></div>
+          </div>
+          <div class="col-info">
+            <span class="col-tag">Секційний</span>
+            <h3>L-Form Lux</h3>
+            <p>П-подібний диван з натуральної шкіри. Кутовий блок, механізм розкладання.</p>
+            <span class="col-price">від 112 000 ₴</span>
+          </div>
+        </article>
+
+        <article class="col-card" data-cursor="Детальніше">
+          <div class="col-img-wrap">
+            <div class="col-img" style="background-image: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&q=80')"></div>
+          </div>
+          <div class="col-info">
+            <span class="col-tag">Пуф</span>
+            <h3>Round Calm</h3>
+            <p>Пуф-оттоманка з контрастним кантом. Знімний чохол, наповнювач — Memory Foam.</p>
+            <span class="col-price">від 9 800 ₴</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="col-nav">
+      <button class="col-btn" id="colPrev" aria-label="Назад">←</button>
+      <button class="col-btn" id="colNext" aria-label="Вперед">→</button>
+    </div>
+  </section>
+
+  <!-- FULLSCREEN GALLERY -->
+  <section class="gallery-fs" id="materials">
+    <div class="gallery-fs-inner" id="galleryInner">
+
+      <div class="gfs-panel" style="--bg: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=80')">
+        <div class="gfs-overlay"></div>
+        <div class="gfs-content reveal-up">
+          <p class="label light">Тканини</p>
+          <h2>Преміум оббивка</h2>
+          <p>Бельгійський льон, тосканський велюр, букле-ткань, натуральна шкіра — ми обираємо тільки матеріали, що витримують щоденне використання і не втрачають вигляду роками.</p>
+        </div>
+        <div class="gfs-tap-hint">Натисніть щоб далі →</div>
+      </div>
+
+      <div class="gfs-panel" style="--bg: url('https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=1600&q=80')">
+        <div class="gfs-overlay"></div>
+        <div class="gfs-content reveal-up">
+          <p class="label light">Каркас</p>
+          <h2>Масив дерева</h2>
+          <p>Каркас з сухого масиву бука та дуба. Жодної ДСП, жодного МДФ. Конструкція витримує десятиліття і не скрипить.</p>
+        </div>
+        <div class="gfs-tap-hint">Натисніть щоб далі →</div>
+      </div>
+
+      <div class="gfs-panel" style="--bg: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=80')">
+        <div class="gfs-overlay"></div>
+        <div class="gfs-content reveal-up">
+          <p class="label light">Наповнювач</p>
+          <h2>Комфорт зсередини</h2>
+          <p>Незалежні пружини Pocket Spring + Memory Foam. Диван залишається пружним і рівним навіть через 10 років активного використання.</p>
+        </div>
+        <div class="gfs-tap-hint">↺ Повернутись на початок</div>
+      </div>
+
+    </div>
+    <div class="gfs-progress" id="gfsProgress"></div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="process-header reveal-up">
+      <p class="label">Як ми працюємо</p>
+      <h2 class="section-title">Від ідеї до вашого дивана</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal-up" style="--delay: 0s">
+        <div class="step-num">01</div>
+        <h3>Консультація</h3>
+        <p>Говоримо про ваш простір, стиль, побажання. Виїжджаємо на замір або онлайн-зустріч.</p>
+      </div>
+      <div class="step reveal-up" style="--delay: 0.12s">
+        <div class="step-num">02</div>
+        <h3>Підбір матеріалів</h3>
+        <p>Показуємо зразки тканин, шкіри, фурнітури. Узгоджуємо колір, фактуру, конфігурацію.</p>
+      </div>
+      <div class="step reveal-up" style="--delay: 0.24s">
+        <div class="step-num">03</div>
+        <h3>Виготовлення</h3>
+        <p>Ручна робота у нашому цеху. Термін — 3–5 тижнів. Фото прогресу на кожному етапі.</p>
+      </div>
+      <div class="step reveal-up" style="--delay: 0.36s">
+        <div class="step-num">04</div>
+        <h3>Доставка і збирання</h3>
+        <p>Доставляємо і збираємо власною командою. Гарантія на виріб — 5 років.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="quote-section">
+    <div class="quote-inner reveal-up">
+      <svg class="quote-mark" viewBox="0 0 60 40" fill="none">
+        <path d="M0 40V20C0 9 9 0 20 0h4v8h-4c-6.6 0-12 5.4-12 12v2h12v18H0zm36 0V20C36 9 45 0 56 0h4v8h-4c-6.6 0-12 5.4-12 12v2h12v18H36z" fill="currentColor" opacity=".2"/>
+      </svg>
+      <blockquote>
+        Замовляла диван у SOFT Furnishings вперше — і це точно не останній раз. Якість просто неймовірна. Сусіди питають, де купила. Кажу: замовила, і це зовсім інший рівень.
+      </blockquote>
+      <cite>— Марина Козаченко, клієнт SOFT Furnishings з 2023 року</cite>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-text reveal-up">
+        <p class="label">Готові почати?</p>
+        <h2>Розкажіть нам<br><em>про свій простір</em></h2>
+        <p>Консультація безкоштовна. Відповідаємо протягом 2 годин у робочий час.</p>
+        <div class="contact-channels">
+          <a href="tel:+380442342342" class="channel-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.87 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012.78 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            +380 (44) 234-23-42
+          </a>
+          <a href="https://t.me/soft_furnishings" class="channel-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.5 3.5L2.5 10.5l6 2.5 2.5 6.5 3-4.5 5 4.5 2.5-16z"/></svg>
+            Telegram @soft_furnishings
+          </a>
+          <a href="mailto:hello@soft-furnishings.ua" class="channel-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@soft-furnishings.ua
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal-up" style="--delay:.1s" id="contactForm">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Ваше ім'я" required autocomplete="off">
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Номер телефону" required autocomplete="off">
+        </div>
+        <div class="form-group">
+          <select name="product">
+            <option value="" disabled selected>Що вас цікавить?</option>
+            <option>Диван</option>
+            <option>Крісло</option>
+            <option>М'яке ліжко</option>
+            <option>Пуф / Оттоманка</option>
+            <option>Індивідуальне замовлення</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="4" placeholder="Розкажіть про ваш проект..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary full">Надіслати заявку</button>
+        <p class="form-note">Натискаючи кнопку, ви погоджуєтесь з умовами обробки персональних даних.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <!-- Mini logo in footer -->
+        <svg class="footer-logo-svg" viewBox="0 0 180 50" fill="none">
+          <text x="0" y="40" font-family="'Jost', sans-serif" font-weight="300" font-size="42" fill="white" letter-spacing="-1">S</text>
+          <g transform="translate(30, 6)">
+            <rect x="3" y="3" width="38" height="22" rx="11" stroke="#7dd3db" stroke-width="3" fill="none"/>
+            <line x1="10" y1="25" x2="8" y2="33" stroke="#7dd3db" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="34" y1="25" x2="36" y2="33" stroke="#7dd3db" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="7" y1="32" x2="37" y2="32" stroke="#7dd3db" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <text x="76" y="40" font-family="'Jost', sans-serif" font-weight="300" font-size="42" fill="white" letter-spacing="-1">FT</text>
+          <text x="160" y="14" font-family="'Jost', sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.4)">®</text>
+          <text x="44" y="48" font-family="'Jost', sans-serif" font-weight="300" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="2.5">Furnishings</text>
+        </svg>
+        <p>М'які меблі ручної роботи.<br>Київ, вул. Хрещатик 22</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Навігація</h4>
+          <a href="#collections">Колекції</a>
+          <a href="#materials">Матеріали</a>
+          <a href="#process">Як ми працюємо</a>
+          <a href="#contact">Контакти</a>
+        </div>
+        <div>
+          <h4>Соціальні мережі</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SOFT Furnishings®. Всі права захищено.</span>
+      <span>М'які меблі, що живуть з вами</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
